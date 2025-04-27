@@ -21,41 +21,62 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Backend - Fullstack Product App
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Este es el backend de la aplicación Fullstack Product App, desarrollado con NestJS. Proporciona la lógica de negocio y las APIs necesarias para gestionar productos, transacciones, clientes y entregas.
 
-## Project setup
+## Estructura del Proyecto
 
+- **application**: Contiene los servicios de la aplicación.
+- **domain**: Define las entidades del dominio.
+- **infrastructure**: Contiene los controladores y la lógica de acceso a datos.
+- **test**: Pruebas unitarias y de integración.
+
+## Instalación
+
+### Requisitos previos
+- Node.js (v16 o superior)
+- Docker y Docker Compose
+
+### Pasos
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Configurar las variables de entorno:
+   Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+   ```env
+   DATABASE_URL=<URL_DE_LA_BASE_DE_DATOS>
+   JWT_SECRET=<SECRETO_JWT>
+   ```
+3. Iniciar el servidor:
+   ```bash
+   npm run start:dev
+   ```
+
+## Uso
+
+El backend estará disponible en `http://localhost:4000`. Puedes usar herramientas como Postman para probar las APIs.
+
+## Pruebas
+
+Ejecutar pruebas unitarias:
 ```bash
-$ npm install
+npm run test
 ```
 
-## Compile and run the project
-
+Ejecutar pruebas de integración:
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm run test:e2e
 ```
 
-## Run tests
+## Contribución
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+1. Crear una rama para tu funcionalidad o corrección de errores:
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+2. Realizar un pull request.
 
 ## Deployment
 

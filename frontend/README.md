@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# Frontend - Fullstack Product App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el frontend de la aplicación Fullstack Product App, desarrollado con React y Vite. Proporciona la interfaz de usuario para gestionar productos, transacciones y pagos.
 
-Currently, two official plugins are available:
+## Estructura del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **components**: Componentes reutilizables como Navbar y Footer.
+- **pages**: Páginas principales como Productos, Carrito y Formulario de Pago.
+- **store**: Manejo del estado global con Redux Toolkit.
+- **utils**: Funciones utilitarias como validaciones.
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Requisitos previos
+- Node.js (v16 o superior)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Pasos
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Configurar las variables de entorno:
+   Si es necesario, ajustar las configuraciones en `vite.config.ts`.
+3. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+## Uso
+
+El frontend estará disponible en `http://localhost:3000`.
+
+## Pruebas
+
+Ejecutar pruebas unitarias:
+```bash
+npm run test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contribución
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Crear una rama para tu funcionalidad o corrección de errores:
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+2. Realizar un pull request.
